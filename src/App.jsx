@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <NavBar tab={tab}></NavBar>
-     
+      <Banner></Banner>
       
 
     </>
