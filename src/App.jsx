@@ -1,34 +1,32 @@
 
-import { useState } from "react"
+
 import NavBar from "./component/NavBar"
 import Models from "./component/Models";
 import Banner from "./component/Banner";
+import Footer from "./component/Footer";
 
-// props --> can send data in one way 
-// Parent -->  Child
-// hooks --> used for state changed
+
+const getModels = async() => {
+    const response = await fetch("/models.json")
+    return response.json();
+    
+}
+
+const modelPromise = getModels();
+
+
 
 function App() {
 
-  // hooks 
-  const [tab, setTab] = useState("model")
-  console.log(setTab)
-
-  console.log("Render...");
-
-
-  // const handleAge = (age) =>{
-  //   console.log(age);
-  // }
-
-  // const [age, setAge] = useState(21);
-  // console.log(age);
+  
   
   
   return (
     <>
       <NavBar></NavBar>
       <Banner></Banner>
+      <Models modelPromise={modelPromise}></Models>
+      <Footer></Footer>
       
 
     </>
