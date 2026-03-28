@@ -2,8 +2,7 @@
 import React from 'react';
 
 
-const NavBar = ({ data }) => {
-    console.log(data);
+const NavBar = () => {
     return (
     
         <div className="navbar">
