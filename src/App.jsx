@@ -6,6 +6,7 @@ import Banner from "./component/Banner";
 import Footer from "./component/Footer";
 import Cart from "./component/Cart";
 import { useState } from "react";
+import { ToastContainer } from 'react-toastify'
 
 
 const getModels = async () => {
@@ -46,7 +47,7 @@ function App() {
       
       <Footer></Footer>
 
-
+      <ToastContainer></ToastContainer>
     </>
   )
 }
