@@ -1,13 +1,16 @@
 
 import React, { useState } from 'react';
 
-const ModelCard = ({ model }) => {
+const ModelCard = ({ model, carts, setCarts }) => {
     // console.log(title, description, price)
+
+    // console.log(carts)
 
      const [isSubscribed, setIsSubscribed] = useState(false);
 
      const handleSubscription = () => {
-        setIsSubscribed(true)
+        setIsSubscribed(true);
+        setCarts([...carts,model]);
      }
 
     return (
