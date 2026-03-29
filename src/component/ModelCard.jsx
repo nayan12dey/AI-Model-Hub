@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const ModelCard = ({ model, carts, setCarts }) => {
     // console.log(title, description, price)
@@ -11,6 +12,7 @@ const ModelCard = ({ model, carts, setCarts }) => {
      const handleSubscription = () => {
         setIsSubscribed(true);
         setCarts([...carts,model]);
+        toast.success("Item added to cart")
      }
 
     return (

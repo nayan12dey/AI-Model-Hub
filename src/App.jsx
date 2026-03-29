@@ -37,7 +37,7 @@ function App() {
       {/* name of each tab group should be unique */}
       <div className="tabs tabs-box justify-center bg-transparent">
         <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Models" onClick={() => setActiveTab("model")} defaultChecked />
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Cart" onClick={() => setActiveTab("cart")} />
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label={`Cart (${carts.length})`} onClick={() => setActiveTab("cart")} />
       </div>
 
       {activeTab === "model" && <Models modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Models>}
